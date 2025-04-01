@@ -10,10 +10,10 @@ static const int kDefaultInstancePort = 0;
 static const int kDefaultInstancePriority = 0;
 static const int kDefaultInstanceWeight = 100;
 static const int kDefaultInstanceHealthCheckTTL = 5;
-static const std::string kDefaultInstanceHealthCheckType = "HEARTBEAT";
+static const char kDefaultInstanceHealthCheckType[] = "HEARTBEAT";
 
-static const std::string kDefaultMetaMatchType = "EXACT";
-static const std::string kDefaultMetaValueType = "TEXT";
+static const char kDefaultMetaMatchType[] = "EXACT";
+static const char kDefaultMetaValueType[] = "TEXT";
 
 void to_json(json &j, const struct discover_request &request) {
     j = json{{"type", request.type},
