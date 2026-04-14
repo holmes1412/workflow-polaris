@@ -707,7 +707,10 @@ bool PolarisPolicy::split_fragment(const char *fragment,
 								   std::map<std::string, std::string>& meta)
 {
 	if (fragment == NULL)
-		return false;
+	{
+//		return false; // return false for rule_based policy
+		return true;  // return true for common policy
+	}
 
 	std::string caller_info = fragment;
 	std::vector<std::string> arr = StringUtil::split(caller_info, '&');
