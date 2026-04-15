@@ -10,7 +10,7 @@ void PolarisCluster::reset_healthcheck_cluster(const std::vector<struct instance
     std::vector<struct instance> filtered_instances;
     for (const auto& inst : instances)
     {
-        if (inst.port == 8080) // for http
+        if (inst.protocol == "http")
             filtered_instances.push_back(inst);
     }
     
