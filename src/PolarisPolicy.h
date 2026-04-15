@@ -1,6 +1,7 @@
 #ifndef _POLARISPOLICIES_H_
 #define _POLARISPOLICIES_H_
 
+#include <stdint.h>
 #include <utility>
 #include <string>
 #include <vector>

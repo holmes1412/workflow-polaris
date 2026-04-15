@@ -312,7 +312,7 @@ WFHttpTask *PolarisTask::create_circuitbreaker_http_task() {
 // the request is the same as deregister
 // the response is the same as register/deregister
 WFHttpTask *PolarisTask::create_heartbeat_http_task() {
-    std::string url = "http://" + this->cluster.get_healthcheck_policy() +  ":8080/v1/Heartbeat";
+    std::string url = "http://" + this->cluster.get_healthcheck_policy() +  "/v1/Heartbeat";
     auto *task = WFTaskFactory::create_http_task(url,
                                                  REDIRECT_MAX,
                                                  this->retry_max,
